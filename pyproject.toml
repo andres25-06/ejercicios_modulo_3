@@ -68,7 +68,7 @@ select = ["E", "F", "I", "W", "PLC", "PLR"]
 
 # 'ignore' desactiva reglas específicas si son muy molestas.
 # Por ejemplo, 'E501' es la regla de "línea demasiado larga".
-ignore = []
+ignore = ["PLR2004"]
 
 # Puedes añadir aquí reglas que no se puedan arreglar automáticamente.
 unfixable = []

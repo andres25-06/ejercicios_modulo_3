@@ -9,7 +9,8 @@ def crear_contador () -> Callable [[],int]:
     Crea un contador  independiente que recuarda cuantas veces ha sido llamado
 
     Returns:
-        Callable [[],int]: una función interna que incrementa y devuelve el conteo actual
+        Callable [[],int]: una función interna que incrementa
+        y devuelve el conteo actual
     """
 
     conteo=0

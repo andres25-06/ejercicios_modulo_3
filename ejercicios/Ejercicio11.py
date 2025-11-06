@@ -29,7 +29,9 @@ def ver_tareas()->list[str]:
             tareas =[linea.strip() for linea in archivo.readlines() if linea.strip()]
         return tareas
     except FileNotFoundError:
-        console.print("[yellow] No se encontro el archivo de tareas. Se creara uno nuevo[/yellow] ")
+        console.print(
+            "[yellow] No se encontro el archivo de tareas."
+            "Se creara uno nuevo[/yellow] ")
         with open (archivo_tareas, "w",encoding="utf-8") as archivo:
             pass
         return []
@@ -65,29 +67,30 @@ def main()->None:
     """
 
     while True:
-         console.print("\n[bold cyan]✨ Gestor de Tareas ✨ [/bold cyan]" )
-         console.print("1️⃣ Agregar Tarea")
-         console.print("2️⃣ Ver Tareas")
-         console.print("3️⃣ Salir\n")
+        console.print("\n[bold cyan]✨ Gestor de Tareas ✨ [/bold cyan]" )
+        console.print("1️⃣ Agregar Tarea")
+        console.print("2️⃣ Ver Tareas")
+        console.print("3️⃣ Salir\n")
 
-         opcion=input("Seleccione una opción (1-3): ")
+        opcion=input("Seleccione una opción (1-3): ")
 
-         if opcion=="1":
-             tarea =input("Escribe la nueva tarea: ").strip()
-             if tarea:
-                 agregar_tarea(tarea)
-             else:
-                 console.print("[red]⚠️ La tarea no puede estar vacía.[/red]")
+        if opcion=="1":
+            tarea =input("Escribe la nueva tarea: ").strip()
+            if tarea:
+                agregar_tarea(tarea)
+            else:
+                console.print("[red]⚠️ La tarea no puede estar vacía.[/red]")
 
-         elif opcion=="2":
-             mostrar_tareas()
+        elif opcion=="2":
+            mostrar_tareas()
 
-         elif opcion=="3":
-             console.print("\n[bold green]👋 Saliendo del gestor de tareas...[/bold green]")
-             break
+        elif opcion=="3":
+            console.print(
+                "\n[bold green]👋 Saliendo del gestor de tareas...[/bold green]")
+            break
 
-         else:
-             console.print("[red]❌ Opción no válida intenta de nuevo.[/red]")
+        else:
+            console.print("[red]❌ Opción no válida intenta de nuevo.[/red]")
 
 
 if __name__=="__main__":

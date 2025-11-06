@@ -32,14 +32,14 @@ def crear_perfil (nombre:str,edad:int,*hobbies:str,**redes_sociales:str)->str:
     table.add_row("Nombre",nombre)
     table.add_row("Edad",str(edad))
 
-    table.add_row("Hobbies", ", ".join(hobbies) if hobbies else "No especificados")
+    table.add_row("Hobbies", ", ".join(hobbies) if hobbies else 'No especificados')
 
     if redes_sociales:
         redes="\n".join(f"{red}:{usuario}"for red,usuario in redes_sociales.items())
         table.add_row("Redes Sociales",redes)
 
     else:
-        table.add_row("Redes Sociales","No registradas")
+        table.add_row("Redes Sociales",'No registradas')
 
 
     console=Console()
@@ -48,8 +48,18 @@ def crear_perfil (nombre:str,edad:int,*hobbies:str,**redes_sociales:str)->str:
     perfil_texto=(
         f"Perfil de {nombre}\n"
         f"Edad: {edad}\n"
-        f"Hobbies:{', '.join(hobbies)if hobbies else "No especificados"}\n"
-        f"Redes:{', '.join(redes_sociales.keys()) if redes_sociales else "No registradas"}"
+        f"Hobbies:{
+            ', '.join(hobbies)
+            if
+                hobbies
+            else
+                'No especificados'}\n"
+        f"Redes:{
+            ', '.join(redes_sociales.keys())
+            if
+                redes_sociales
+            else
+                'No registradas'}"
     )
 
     return perfil_texto
@@ -64,9 +74,12 @@ def solicitar_datos_usuario()->Tuple[str,int,Tuple[str, ...],Dict[str,str]]:
 
     nombre=input("  Ingrese su nombre: ").strip()
     edad=int(input("  Ingrese su edad: "))
-    hobbies_input=input("  Ingrese sus hobbies separados por comas(o deja vacío si no tienes): ").strip()
+    hobbies_input=input(
+        "Ingrese sus hobbies separados por comas(o deja vacío si no tienes): ").strip()
 
-    hobbies=tuple(h.strip() for h in hobbies_input.split(",") if h.strip()) if hobbies_input else()
+    hobbies=tuple(
+        h.strip() for h in hobbies_input.split(
+            ",") if h.strip()) if hobbies_input else()
 
     redes_sociales:Dict[str, str]={}
     print("\n  Ingresa tus redes sociales (deja el nombre vacío para terminar): ")

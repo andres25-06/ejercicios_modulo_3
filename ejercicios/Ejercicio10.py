@@ -5,7 +5,9 @@ from rich.tree import Tree
 
 console=Console()
 
-def explorar_estructura(elemento:Any,profundidad:int=1,arbol:Union[Tree,None]=None)->None:
+def explorar_estructura(
+    elemento:Any,profundidad:int=1,arbol:Union[
+        Tree,None]=None)->None:
     """
     Explora recursivamente estructuras de datos aninadas (listas,diccionarios,tuplas...
 
@@ -21,7 +23,8 @@ def explorar_estructura(elemento:Any,profundidad:int=1,arbol:Union[Tree,None]=No
     if isinstance(elemento,dict):
         rama = arbol.add(f"[cyan] Diccianario nivel  {profundidad}) [/cyan] ")
         for clave,valor in elemento.items():
-            rama_hija=rama.add(f"[yellow] {clave}[/yellow]->[white]{type(valor).__name__}[/white]")
+            rama_hija=rama.add(
+                f"[yellow] {clave}[/yellow]->[white]{type(valor).__name__}[/white]")
             explorar_estructura(valor,profundidad +1, rama_hija)
 
     elif isinstance(elemento,(list,tuple,set)):
@@ -32,7 +35,8 @@ def explorar_estructura(elemento:Any,profundidad:int=1,arbol:Union[Tree,None]=No
 
     else:
         arbol.add(
-            f"[white] Valor: [bold] {elemento}[/bold], Profundidad: [bold cyan] {profundidad}[/bold cyan]"
+            f"[white] Valor: [bold] {
+                elemento}[/bold], Profundidad: [bold cyan] {profundidad}[/bold cyan]"
         )
 
     if profundidad == 1:

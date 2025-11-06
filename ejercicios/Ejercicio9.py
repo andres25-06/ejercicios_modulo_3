@@ -11,10 +11,8 @@ console = Console()
 def sumar_lista(numeros:list[int])->int:
     """
     Calcula la suma de una lista de números usando reduce
-
     Args:
         numeros (List[in]): Lista de números a sumar
-
     Returns:
         int: Resultadode la suma total
     """
@@ -24,10 +22,8 @@ def concatenar_texto(partes:List[str])->str:
 
     """
     Concatena los elementos de una lista de strings en una sola frase
-
     Args:
         partes (List[str]): Lista de fragmentos de texto
-
     Returns:
         str: Frase completa resultante
     """
@@ -37,8 +33,7 @@ def concatenar_texto(partes:List[str])->str:
 def mostrar_resultados(numeros:List[int],partes:List[str])->None:
 
     """
-    Muestra los resultados 
-    
+    Muestra los resultados
     Args:
         numeros(List[int]): Lista de numeros a sumar
         partes (List[str]): Lista de fragmentos de texto a concatenar

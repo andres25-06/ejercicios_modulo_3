@@ -5,25 +5,31 @@ from rich.table import Table
 
 console = Console()
 
-def aplicar_descuento(productos:list[dict[str,Any]])->list[float]:
+def aplicar_descuento(
+    productos:list[dict[str,Any]])->list[float]:
     """
     Aplica un descuento del 10 % alos precios de una lista de productos
 
     Args:
-        productos(list[dict[str,Any]]): Lista de diccionarios,donde cada uno contiene:
+        productos(list[dict[str,Any]]): Lista de diccionarios,
+        donde cada uno contiene:
         -'nombre'(str): el nombre del producto
         -'precio'(float o int): el precio original del producto
 
     Returns:
-        list[float]:Nueva lista con los productos actualizados despues de aplicar el descuento
+        list[float]:Nueva lista con los productos actualizados
+        despues de aplicar el descuento
         del 10%
     """
 
-    precios_descuento=list(map(lambda p:round(p["precio"]*0.9,2),productos))
+    precios_descuento=list(map(
+        lambda p:round(p["precio"]*0.9,2),productos))
 
     return precios_descuento
 
-def mostrar_tabla(productos:list[dict[str,Any]],precios_descuento:list[float])->None:
+def mostrar_tabla(
+    productos:list[
+        dict[str,Any]],precios_descuento:list[float])->None:
     """
     Muestra la tabla con los productos originales y sus precios con descuanto
 

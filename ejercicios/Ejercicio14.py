@@ -1,5 +1,6 @@
 import csv
 import json
+
 from rich.console import Console
 from rich.table import Table
 

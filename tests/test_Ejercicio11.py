@@ -1,6 +1,9 @@
-from ejercicios.Ejercicio11 import agregar_tarea,ver_tareas,archivo_tareas
 import os
+
 import pytest
+
+from ejercicios.Ejercicio11 import agregar_tarea, archivo_tareas, ver_tareas
+
 
 @pytest.fixture(autouse=True)
 def limpiar_archivo():

@@ -1,5 +1,6 @@
 from ejercicios.Ejercicio3 import crear_contador
 
+
 def test_contadores_independientes():
     """
     Verifica que cada contador sea independiente

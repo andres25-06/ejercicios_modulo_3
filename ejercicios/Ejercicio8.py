@@ -1,8 +1,10 @@
-from typing import List,Dict
+from typing import Dict, List
+
 from rich.console import Console
-from rich.table import Table
 from rich.panel import Panel
+from rich.table import Table
 from rich.text import Text
+
 
 def filtrar_palabras_largas(texto:str)->List[str]:
     """

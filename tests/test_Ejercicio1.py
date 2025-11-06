@@ -1,5 +1,6 @@
 import pytest
-from ejercicios.Ejercicio1 import calcular_imc,interpretar_imc
+
+from ejercicios.Ejercicio1 import calcular_imc, interpretar_imc
 
 
 def test_calcular_imc_correcto():

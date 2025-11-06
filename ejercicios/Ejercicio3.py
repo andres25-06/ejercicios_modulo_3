@@ -1,6 +1,8 @@
 from typing import Callable
+
 from rich.console import Console
 from rich.table import Table
+
 
 def crear_contador () -> Callable [[],int]:
     """

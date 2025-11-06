@@ -1,5 +1,6 @@
 from ejercicios.Ejercicio6 import aplicar_descuento
 
+
 def test_aplicar_descuento_correcto():
     """
     Verifica que el descuento del 10% se aplique correctamente aun producto.

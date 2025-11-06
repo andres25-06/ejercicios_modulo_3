@@ -1,4 +1,5 @@
-from ejercicios.Ejercicio4 import aplicar_validador,es_mayor_a_10,email_valido
+from ejercicios.Ejercicio4 import aplicar_validador, email_valido, es_mayor_a_10
+
 
 def test_email_valido():
     assert email_valido("test@gmail.com") is True

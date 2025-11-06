@@ -1,6 +1,7 @@
 from typing import NoReturn
-from rich.table import Table
+
 from rich.console import Console
+from rich.table import Table
 
 tasa_IVA:float =0.19
 

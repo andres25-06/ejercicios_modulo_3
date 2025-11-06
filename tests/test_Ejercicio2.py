@@ -1,5 +1,6 @@
 from ejercicios.Ejercicio2 import crear_perfil
 
+
 def test_crear_perfil_condatos():
     """
     Verifia que la función funcione correctamente con todos los datos

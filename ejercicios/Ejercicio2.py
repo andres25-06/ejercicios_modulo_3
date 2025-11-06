@@ -1,6 +1,8 @@
-from typing import Tuple,Dict
+from typing import Dict, Tuple
+
 from rich.console import Console
 from rich.table import Table
+
 
 def crear_perfil (nombre:str,edad:int,*hobbies:str,**redes_sociales:str)->str:
     """

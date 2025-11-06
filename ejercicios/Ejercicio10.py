@@ -1,4 +1,5 @@
-from typing import Any,Union
+from typing import Any, Union
+
 from rich.console import Console
 from rich.tree import Tree
 
@@ -15,7 +16,7 @@ def explorar_estructura(elemento:Any,profundidad:int=1,arbol:Union[Tree,None]=No
     """
 
     if arbol is None:
-        arbol =Tree(f"[bold magenta] Exploración recursiva [/bold magenta]")
+        arbol =Tree("[bold magenta] Exploración recursiva [/bold magenta]")
 
     if isinstance(elemento,dict):
         rama = arbol.add(f"[cyan] Diccianario nivel  {profundidad}) [/cyan] ")

@@ -1,6 +1,8 @@
-from typing import List,Tuple
+from typing import List, Tuple
+
 from rich.console import Console
 from rich.table import Table
+
 
 def filtrar_aprobados(estudiantes:List[Tuple[str,float]])->List[Tuple[str,float]]:
     """

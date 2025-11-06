@@ -1,5 +1,7 @@
-from ejercicios.Ejercicio9 import sumar_lista,concatenar_texto
-import pytest
+
+from ejercicios.Ejercicio9 import concatenar_texto, sumar_lista
+
+
 def test_sumar_lista_valores_positivos():
     """
     suma de una lista de enteros positivos

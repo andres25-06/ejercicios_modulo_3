@@ -1,5 +1,7 @@
-from ejercicios.Ejercicio10 import explorar_estructura
 import pytest
+
+from ejercicios.Ejercicio10 import explorar_estructura
+
 
 def test_explorar_lista_simple(capsys: pytest.CaptureFixture) -> None:
     """

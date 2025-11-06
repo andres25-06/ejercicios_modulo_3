@@ -1,5 +1,6 @@
 from ejercicios.Ejercicio7 import filtrar_aprobados
 
+
 def test_filtrar_aprobados_basico():
     """
     Verifica que la función correctamente a los estudiantes con nota >=3.0

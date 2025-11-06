@@ -1,4 +1,5 @@
-from ejercicios.Ejercicio8 import filtrar_palabras_largas,contar_longitud_palabras
+from ejercicios.Ejercicio8 import contar_longitud_palabras, filtrar_palabras_largas
+
 
 def test_filtrar_palabras_largas():
     texto="Hola me llamo Tatiana y estoy programando en Python"

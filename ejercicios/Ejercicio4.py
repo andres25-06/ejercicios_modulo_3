@@ -1,7 +1,9 @@
-from typing import Callable
 import re
-from rich.table import Table
+from typing import Callable
+
 from rich.console import Console
+from rich.table import Table
+
 
 def aplicar_validador(datos:list,validador:Callable[[object],bool])-> list:
     """
